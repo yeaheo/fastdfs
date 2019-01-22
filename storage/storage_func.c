@@ -23,14 +23,14 @@
 #include <errno.h>
 #include <time.h>
 #include "fdfs_define.h"
-#include "logger.h"
+#include "fastcommon/logger.h"
 #include "fdfs_global.h"
-#include "sockopt.h"
-#include "shared_func.h"
-#include "pthread_func.h"
-#include "sched_thread.h"
-#include "ini_file_reader.h"
-#include "connection_pool.h"
+#include "fastcommon/sockopt.h"
+#include "fastcommon/shared_func.h"
+#include "fastcommon/pthread_func.h"
+#include "fastcommon/sched_thread.h"
+#include "fastcommon/ini_file_reader.h"
+#include "fastcommon/connection_pool.h"
 #include "tracker_types.h"
 #include "tracker_proto.h"
 #include "fdfs_shared_func.h"
@@ -1777,7 +1777,7 @@ int storage_func_init(const char *filename, \
 			"work_threads=%d, "    \
 			"disk_rw_separated=%d, disk_reader_threads=%d, " \
 			"disk_writer_threads=%d, " \
-			"buff_size=%dKB, heart_beat_interval=%ds, " \
+			"buff_size=%d KB, heart_beat_interval=%ds, " \
 			"stat_report_interval=%ds, tracker_server_count=%d, " \
 			"sync_wait_msec=%dms, sync_interval=%dms, " \
 			"sync_start_time=%02d:%02d, sync_end_time=%02d:%02d, "\
